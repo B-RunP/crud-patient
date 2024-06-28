@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AdminPage = () => {
   const [patients, setPatients] = useState([]);
@@ -48,6 +49,7 @@ const AdminPage = () => {
     <div>
       <h2>Rumah Sakit Sehat Waras</h2>
       <h3>Data Pasien</h3>
+      <Link to="/add-patient">Tamba Data</Link>
       <table border="1">
         <tr>
           <th>Nomor</th>

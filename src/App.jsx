@@ -18,6 +18,7 @@ import RegisterPage from "./pages/RegisterPage";
 import Layout from "./components/Layout";
 import ServicePage from "./pages/ServicePage";
 import HomePage from "./pages/HomePage";
+import AddPatient from "./pages/AddPatient";
 
 const App = () => {
   const [user, setUser] = useState(getUserFromLocalStorage());
@@ -42,6 +43,12 @@ const App = () => {
                 path="/admin"
                 element={
                   user.role === "admin" ? <AdminPage /> : <Navigate to="/" />
+                }
+              />
+              <Route
+                path="/add-patient"
+                element={
+                  user.role === "admin" ? <AddPatient /> : <Navigate to="/" />
                 }
               />
               <Route
